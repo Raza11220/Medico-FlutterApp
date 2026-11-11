@@ -1,0 +1,18 @@
+MEDICO - 34 SCREENS
+
+1. ZIP extract karein. Existing Firebase project ke upar paste na karein.
+2. VS Code > File > Open Folder > medico select karein.
+3. Terminal mein:
+
+   powershell -ExecutionPolicy Bypass -File .\setup.ps1
+   flutter run
+
+4. Pixel emulator ya apna connected Android phone choose karein.
+5. Sign in par Patient / Doctor / Admin select karke Explore demo press karein.
+6. Top bar ka grid icon tamam 34 screens kholta hai.
+
+Browser alternative: flutter run -d chrome
+
+Firebase terminal ki zaroorat nahi. Sab data local demo hai.
+Code syntax/structure checked; emulator build is environment mein verify nahi hua.
+Detailed guide: README.md
