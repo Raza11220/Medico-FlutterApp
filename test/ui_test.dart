@@ -53,11 +53,19 @@ void main() {
     expect(find.text('Confirmed'), findsOneWidget);
   });
   testWidgets('Chat adds local message', (tester) async {
+    tester.view.physicalSize = const Size(390, 844);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
     await tester.pumpWidget(const MaterialApp(home: Screen16()));
     await tester.pumpAndSettle();
-    await tester.ensureVisible(find.byType(TextFormField));
-    await tester.enterText(find.byType(TextFormField), 'Hello doctor');
-    await tester.ensureVisible(find.text('Send message'));
+    final scroll = find.byType(Scrollable).first;
+    await tester.drag(scroll, const Offset(0, -300));
+    await tester.pumpAndSettle();
+
+    final input = find.byType(TextFormField).first;
+    await tester.enterText(input, 'Hello doctor');
     await tester.tap(find.text('Send message'));
     await tester.pumpAndSettle();
     expect(demo.messages.last, 'You: Hello doctor');

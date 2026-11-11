@@ -12,7 +12,7 @@ class _Screen02State extends DemoPageState<Screen02> {
   Widget build(BuildContext context) {
     return shell(2, [
       Center(
-        child: Image.asset('assets/images/logo.png', width: 160, height: 70),
+        child: Image.asset('assets/images/medico-logo.png', width: 160, height: 70),
       ),
       gap(20),
       Center(child: kit(size: 250)),

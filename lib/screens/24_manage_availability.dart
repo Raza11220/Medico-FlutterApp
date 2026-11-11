@@ -49,7 +49,7 @@ class _Screen24State extends DemoPageState<Screen24> {
           context: context,
           initialTime: const TimeOfDay(hour: 11, minute: 0),
         );
-        if (t == null || !mounted) return;
+        if (t == null || !context.mounted) return;
         final text = t.format(context);
         if (demo.slots.contains(text)) {
           toast('This time already exists.');

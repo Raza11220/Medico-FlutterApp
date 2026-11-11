@@ -386,12 +386,15 @@ abstract class DemoPageState<T extends StatefulWidget> extends State<T> {
           onChanged?.call(v);
         },
         validator: (v) {
-          if (required && (v ?? '').trim().isEmpty)
+          if (required && (v ?? '').trim().isEmpty) {
             return 'Please enter ${label.toLowerCase()}';
-          if (email && !RegExp(r'^[^\s@]+@[^\s@]+\.[^\s@]+$').hasMatch(v ?? ''))
+          }
+          if (email && !RegExp(r'^[^\s@]+@[^\s@]+\.[^\s@]+$').hasMatch(v ?? '')) {
             return 'Enter a valid email';
-          if (password && (v ?? '').length < 6)
+          }
+          if (password && (v ?? '').length < 6) {
             return 'Use at least 6 characters';
+          }
           return null;
         },
       ),
@@ -474,7 +477,7 @@ abstract class DemoPageState<T extends StatefulWidget> extends State<T> {
     borderRadius: BorderRadius.circular(16),
     child: index == 0
         ? Image.asset(
-            'assets/images/doctor.png',
+            'assets/images/doctor-portrait.png',
             width: size,
             height: size,
             fit: BoxFit.cover,
@@ -488,7 +491,7 @@ abstract class DemoPageState<T extends StatefulWidget> extends State<T> {
           ),
   );
   Widget kit({double size = 150}) => Image.asset(
-    'assets/images/medical_kit.png',
+    'assets/images/medical-kit-3d.png',
     width: size,
     height: size,
     fit: BoxFit.contain,

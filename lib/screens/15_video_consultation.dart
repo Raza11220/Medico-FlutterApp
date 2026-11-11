@@ -18,7 +18,7 @@ class _Screen15State extends DemoPageState<Screen15> {
         borderRadius: BorderRadius.circular(24),
         child: camera
             ? Image.asset(
-                'assets/images/doctor.png',
+                'assets/images/doctor-portrait.png',
                 height: 360,
                 width: double.infinity,
                 fit: BoxFit.cover,
