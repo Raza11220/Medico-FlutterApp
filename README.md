@@ -64,7 +64,7 @@ Designed with a modern **Teal & Navy** medical design language, the app features
 
 ## ✨ Key Features & User Roles
 
-<div align="center">
+<div align="leftced ced">
 
 ### 👤 1. Patient Experience (24 Screens)
 
